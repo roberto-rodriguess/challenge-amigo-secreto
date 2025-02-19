@@ -9,5 +9,11 @@ function adicionarAmigo() {
         alert('Por favor, insira um nome válido.');
     } else {
         listaDeAmigos.push(amigo);
+        limparCampo();
     }
+}
+
+function limparCampo() {
+    let campo = document.querySelector('input');
+    campo.value = '';
 }
