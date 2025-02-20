@@ -22,6 +22,8 @@ function sortearAmigo() {
     } else if (listaDeAmigos.length == 1) {
         alert('Por favor, adicione mais amigos.');
     } else {
+        limparLista();
+        
         let numeroAleatorio = parseInt(Math.random() * listaDeAmigos.length);
         let amigoSorteado = listaDeAmigos[numeroAleatorio];
         resultado.innerHTML = `O amigo secreto sorteado é: ${amigoSorteado}`;
@@ -43,4 +45,9 @@ function exibirAmigosNaTela() {
 function limparCampo() {
     let campo = document.querySelector('input');
     campo.value = '';
+}
+
+function limparLista() {
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = '';
 }
