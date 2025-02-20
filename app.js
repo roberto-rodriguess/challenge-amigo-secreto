@@ -10,6 +10,19 @@ function adicionarAmigo() {
     } else {
         listaDeAmigos.push(amigo);
         limparCampo();
+        exibirAmigosNaTela();
+    }
+}
+
+function exibirAmigosNaTela() {
+    let campo = document.getElementById('listaAmigos');
+    
+    campo.innerHTML = '';
+
+    for (let i = 0; i < listaDeAmigos.length; i++) {
+        let li = document.createElement('li');
+        li.textContent = listaDeAmigos[i];
+        campo.appendChild(li);
     }
 }
 
