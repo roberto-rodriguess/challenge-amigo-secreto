@@ -14,6 +14,20 @@ function adicionarAmigo() {
     }
 }
 
+function sortearAmigo() {
+    let resultado = document.getElementById('resultado');
+
+    if (listaDeAmigos.length == 0) {
+        alert('Nenhum amigo foi adicionado ainda.');
+    } else if (listaDeAmigos.length == 1) {
+        alert('Por favor, adicione mais amigos.');
+    } else {
+        let numeroAleatorio = parseInt(Math.random() * listaDeAmigos.length);
+        let amigoSorteado = listaDeAmigos[numeroAleatorio];
+        resultado.innerHTML = `O amigo secreto sorteado é: ${amigoSorteado}`;
+    }
+}
+
 function exibirAmigosNaTela() {
     let campo = document.getElementById('listaAmigos');
     
